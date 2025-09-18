@@ -6,8 +6,8 @@ services:
   # The Backend Service
   backend:
     build:
-      context: .
-      dockerfile: ./backend/Dockerfile
+      context: ./backend
+      dockerfile: Dockerfile
     ports:
       - "3001:3001"
     volumes:
@@ -21,7 +21,7 @@ services:
   # The Frontend Service
   frontend:
     build:
-      context: .
-      dockerfile: ./dash-slider-auth/Dockerfile
+      context: ./dash-slider-auth
+      dockerfile: Dockerfile
     ports:
       - "3000:80"
