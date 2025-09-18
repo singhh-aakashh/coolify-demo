@@ -19,9 +19,9 @@ services:
       - NODE_ENV=production
 
   # The Frontend Service
-  frontend:
-    build:
-      context: ./dash-slider-auth
-      dockerfile: Dockerfile
-    ports:
-      - "3000:80"
+  # frontend:
+  #   build:
+  #     context: ./dash-slider-auth
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "3000:80"
