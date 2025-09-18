@@ -1,0 +1,25 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  # The Backend Service
+  backend:
+    build: ./backend
+    ports:
+      # Map port 5000 on your machine to port 5000 in the container
+      - "3001:3001"
+    volumes:
+      # Mount the backend source code for live-reloading during development
+      - ./backend:/usr/src/app
+      # Anonymous volume to prevent host node_modules from overwriting container's
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
+
+  # The Frontend Service
+  frontend:
+    build: ./dash-slider-auth
+    ports:
+      # Map port 8080 on your machine to port 80 in the container (where Nginx is running)
+      - "3000:3000"
