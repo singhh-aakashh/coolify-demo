@@ -19,6 +19,12 @@ console.log('Server credentials loaded.');
 console.log(`Username: ${CORRECT_USERNAME}`);
 console.log('Password has been set (not shown for security).');
 
+app.get('/',(req,res) => {
+    return res.status(200).json({
+      success: true,
+      message: 'Hello world'
+    })
+})
 
 /**
  * @route   POST /login
