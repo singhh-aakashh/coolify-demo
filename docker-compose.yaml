@@ -6,10 +6,9 @@ services:
   # The Backend Service
   backend:
     build:
-      context: ./backend
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./backendDockerfile
     ports:
-      # Map port 5000 on your machine to port 5000 in the container
       - "3001:3001"
     volumes:
       # Mount the backend source code for live-reloading during development
@@ -23,7 +22,6 @@ services:
   frontend:
     build:
       context: ./dash-slider-auth
-      dockerfile: Dockerfile
+      dockerfile: ./dash-slider-authDockerfile
     ports:
-      # Map port 8080 on your machine to port 80 in the container (where Nginx is running)
       - "3000:80"

@@ -16,8 +16,7 @@ RUN npm install
 # 5. Copy the rest of your application's source code
 COPY . .
 
-# 6. Your app is running on port 5000, so expose it
-# (Change this port if your backend server uses a different one)
+
 EXPOSE 3001
 
 # 7. Define the command to run your app
