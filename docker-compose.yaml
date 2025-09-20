@@ -10,11 +10,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3001:3001"
-    volumes:
-      # Mount the backend source code for live-reloading during development
-      - ./backend:/usr/src/app
-      # Anonymous volume to prevent host node_modules from overwriting container's
-      - /usr/src/app/node_modules
     environment:
       - NODE_ENV=production
 
